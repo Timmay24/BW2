@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  invoice_date: 2014-12-04
+  recipient_first_name: MyString
+  recipient_last_name: MyString
+  billing_address: MyString
+  order_id: 
+
+two:
+  invoice_date: 2014-12-04
+  recipient_first_name: MyString
+  recipient_last_name: MyString
+  billing_address: MyString
+  order_id: 

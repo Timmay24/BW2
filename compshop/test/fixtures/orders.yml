@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  order_date: 2014-12-04
+  status: MyString
+  shopping_cart_id: 
+
+two:
+  order_date: 2014-12-04
+  status: MyString
+  shopping_cart_id: 

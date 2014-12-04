@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Invoice date:</strong>
+  <%= @invoice.invoice_date %>
+</p>
+
+<p>
+  <strong>Recipient first name:</strong>
+  <%= @invoice.recipient_first_name %>
+</p>
+
+<p>
+  <strong>Recipient last name:</strong>
+  <%= @invoice.recipient_last_name %>
+</p>
+
+<p>
+  <strong>Billing address:</strong>
+  <%= @invoice.billing_address %>
+</p>
+
+<p>
+  <strong>Order:</strong>
+  <%= @invoice.order %>
+</p>
+
+<%= link_to 'Edit', edit_invoice_path(@invoice) %> |
+<%= link_to 'Back', invoices_path %>
