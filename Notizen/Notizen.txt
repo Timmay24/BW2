@@ -1,0 +1,20 @@
+.:SCAFFOLDS:.
+rails g scaffold article name:string description:text category:string price_per_unit:decimal stock:integer
+rails g model article_relation super_id:integer sub_id:integer quantity:integer
+
+rails g scaffold user user_name:string email:string password:string first_name:string last_name:string address:string is_admin:boolean
+rails g scaffold order order_date:date
+rails g scaffold invoice invoice_date:date recipient_first_name:string recipient_last_name:string billing_address:string
+
+rails g scaffold shopping_cart creation_date:date user:references
+
+.:ASSOCIATIONS:. !??
+ShoppingCart belongs_to :user
+User has_many :shopping_carts
+
+Invoice belongs_to :
+Order has_one :invoice
+
+.:TABLES:.
+Article_Order has_many :articles, has_many :orders
+
