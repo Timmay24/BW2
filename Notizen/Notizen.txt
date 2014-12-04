@@ -4,7 +4,7 @@ rails g model article_relation super_id:integer sub_id:integer quantity:integer
 
 rails g scaffold user user_name:string email:string password:string first_name:string last_name:string address:string is_admin:boolean
 rails g scaffold order order_date:date status:string shopping_cart:references
-rails g scaffold invoice invoice_date:date recipient_first_name:string recipient_last_name:string billing_address:string
+rails g scaffold invoice invoice_date:date recipient_first_name:string recipient_last_name:string billing_address:string order:references
 
 rails g scaffold shopping_cart creation_date:date user:references
 
