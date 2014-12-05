@@ -225,7 +225,9 @@ User.create({
 
 	# place order
 	order = Order.create({
-		shopping_cart: card,
+		shopping_cart_id: card,
 		order_date: sample_day
+		status: :completed
+
 	})
 end
