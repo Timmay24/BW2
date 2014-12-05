@@ -30,6 +30,8 @@ gem 'jbuilder', '~> 1.2'
 #
 gem "paperclip", '~> 4.2'
 
+gem 'cocaine', '~> 0.5.3'
+
 group :doc do
   # bundle exec rake doc:rails generates the API under doc/api.
   gem 'sdoc', require: false
