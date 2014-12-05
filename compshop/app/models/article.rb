@@ -2,6 +2,8 @@ class Article < ActiveRecord::Base
   has_many :article_relations,  foreign_key: :super_id
   has_many :supers,             through: :article_relations
   has_many :subs,               through: :article_relations
+  has_many :articles_shopping_carts
+  has_many :shopping_carts,      through: :articles_shopping_carts
 
   validates_presence_of :name
   validates_presence_of :description
