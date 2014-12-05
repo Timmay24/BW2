@@ -200,3 +200,32 @@ User.create({
 	:is_admin => false
 	})
 
+
+######################################################################################
+# Alte Bestellungen
+###################################################################################### 
+ 
+12.times do
+	# fetch an sample customer
+	customer = User.where(is_admin: false).sample
+
+	# pick a date within the last months
+	sample_day = ((3.months.ago.to_date)..(DateTime.now.to_date)).to_a.sample
+
+	# build shopping cart
+	card = ShoppingCart.create({ 
+		user: customer,
+		creation_date: sample_day 
+	})
+	# attache article
+	card.articles_shopping_carts << ArticlesShoppingCart.create({
+		article: Article.all.sample,
+		quantity: 2
+	})
+
+	# place order
+	order = Order.create({
+		shopping_cart: card,
+		order_date: sample_day
+	})
+end
