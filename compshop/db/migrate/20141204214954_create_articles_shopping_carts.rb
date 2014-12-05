@@ -1,4 +1,4 @@
-class CreateArticleShoppingCarts < ActiveRecord::Migration
+class CreateArticlesShoppingCarts < ActiveRecord::Migration
   def change
     create_table :articles_shopping_carts do |t|
       t.references :article
