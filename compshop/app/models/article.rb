@@ -7,6 +7,7 @@ class Article < ActiveRecord::Base
   validates_presence_of :description
   validates_presence_of :price_per_unit
   validates_presence_of :stock
+  validates_uniqueness_of :name
 
 
   def self.search(article)
@@ -15,6 +16,12 @@ class Article < ActiveRecord::Base
       where("name LIKE ? OR description LIKE ?", query, query)
     else
       all
+    end
+  end
+
+  def self.filter(category)
+    if category
+      where("category LIKE ?", category)
     end
   end
 

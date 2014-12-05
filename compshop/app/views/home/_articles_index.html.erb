@@ -1,0 +1,23 @@
+<h2>Browse Articles</h2>
+<table>
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Category</th>
+    <th>Price</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @articles.each do |article| %>
+      <tr>
+        <td><%= link_to article.name, home_show_path(:article => article)  %></td>
+        <td><%= article.category %></td>
+        <td><%= article.price_per_unit %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

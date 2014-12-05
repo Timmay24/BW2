@@ -18,17 +18,18 @@
 </p>
 
 <p>
-  <strong>Price per unit:</strong>
+  <strong>Price:</strong>
   <%= @article.price_per_unit %>
 </p>
 
 <p>
-  <strong>Stock:</strong>
-  <%= @article.stock %>
+  <strong>Availability:</strong>
+  <% if @article.stock > 0 %>
+  <%=   "In stock" %>
+  <% else %>
+  <%=   "Out of stock" %>
+  <% end %>
 </p>
 
-<%= link_to 'New Article', new_article_path %> |
-<%= link_to 'Edit', edit_article_path(@article) %> |
-<%= link_to 'Back', articles_path %>
 
-
+<%= link_to 'Back', :back %>
