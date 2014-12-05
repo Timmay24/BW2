@@ -1,4 +1,4 @@
-class ArticlesShoppingCarts < ActiveRecord::Base
+class ArticlesShoppingCart < ActiveRecord::Base
   belongs_to :article, :class_name => "Article"
   belongs_to :shopping_cart, :class_name => "ShoppingCart"
 
