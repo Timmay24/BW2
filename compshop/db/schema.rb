@@ -21,20 +21,20 @@ ActiveRecord::Schema.define(version: 20141205065202) do
     t.datetime "updated_at"
   end
 
-  create_table "article_shopping_carts", force: true do |t|
-    t.integer  "article_id"
-    t.integer  "shopping_cart_id"
-    t.integer  "quantity"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "articles", force: true do |t|
     t.string   "name"
     t.text     "description"
     t.string   "category"
     t.decimal  "price_per_unit"
     t.integer  "stock"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "articles_shopping_carts", force: true do |t|
+    t.integer  "article_id"
+    t.integer  "shopping_cart_id"
+    t.integer  "quantity"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
