@@ -21,14 +21,6 @@ ActiveRecord::Schema.define(version: 20141205072520) do
     t.datetime "updated_at"
   end
 
-  create_table "article_shopping_carts", force: true do |t|
-    t.integer  "article_id"
-    t.integer  "shopping_cart_id"
-    t.integer  "quantity"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "articles", force: true do |t|
     t.string   "name"
     t.text     "description"
@@ -41,6 +33,14 @@ ActiveRecord::Schema.define(version: 20141205072520) do
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
+  end
+
+  create_table "articles_shopping_carts", force: true do |t|
+    t.integer  "article_id"
+    t.integer  "shopping_cart_id"
+    t.integer  "quantity"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "invoices", force: true do |t|
@@ -84,6 +84,7 @@ ActiveRecord::Schema.define(version: 20141205072520) do
     t.boolean  "is_admin"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end

@@ -1,6 +1,6 @@
-class CreateArticleShoppingCarts < ActiveRecord::Migration
+class CreateArticlesShoppingCarts < ActiveRecord::Migration
   def change
-    create_table :article_shopping_carts do |t|
+    create_table :articles_shopping_carts do |t|
       t.references :article
       t.references :shopping_cart
       t.integer :quantity
