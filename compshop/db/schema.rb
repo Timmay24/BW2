@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141204214954) do
+ActiveRecord::Schema.define(version: 20141205065202) do
 
   create_table "article_relations", force: true do |t|
     t.integer  "super_id"
@@ -80,6 +80,7 @@ ActiveRecord::Schema.define(version: 20141204214954) do
     t.boolean  "is_admin"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "password_digest"
   end
 
 end
