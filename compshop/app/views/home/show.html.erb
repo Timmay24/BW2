@@ -21,7 +21,7 @@
 
 <p>
   <strong>Price:</strong>
-  <%= @article.price_per_unit %>
+  <%= number_to_currency(@article.price_per_unit, :unit => '€', :delimiter => ',') %>
 </p>
 
 <p>

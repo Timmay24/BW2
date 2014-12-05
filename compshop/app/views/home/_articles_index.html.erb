@@ -18,7 +18,7 @@
         <td><%= image_tag article.picture.url(:thumb) %></td>
         <td><%= link_to article.name, home_show_path(:article => article)  %></td>
         <td><%= article.category %></td>
-        <td><%= article.price_per_unit %></td>
+        <td><%= number_to_currency(article.price_per_unit, :unit => '€', :delimiter => ',') %></td>
       </tr>
   <% end %>
   </tbody>
