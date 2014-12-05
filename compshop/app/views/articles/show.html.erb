@@ -5,7 +5,9 @@
   <%= @article.name %>
 </p>
 
-<!-- hier picture -->
+<p>
+  <%= image_tag @article.picture.url(:medium) %>
+</p>
 
 <p>
   <strong>Description:</strong>
