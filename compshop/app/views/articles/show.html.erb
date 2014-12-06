@@ -21,7 +21,7 @@
 
 <p>
   <strong>Price per unit:</strong>
-  <%= number_to_currency(@article.price_per_unit, :unit => '€', :delimiter => ',') %>
+  <%= number_to_currency(@article.price_per_unit, locale: :de) %>
 </p>
 
 <p>
