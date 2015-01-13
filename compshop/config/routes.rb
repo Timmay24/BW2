@@ -1,21 +1,38 @@
 Compshop::Application.routes.draw do
+  resources :admin
+  resources :articles
   resources :invoices
   resources :orders
+  resources :shopping_carts
+  resources :users
 
-  get "home/index"
-  get "admin/index"
-  get "login/index"
+  resources :home do
+    collection do
+      get 'show'
+      get 'category'
+    end
+  end
 
-  get "home/show"
-  get "home/category"
+  resources :login do
+     collection do
+       post 'login', action: :auth
+     end
+  end
+
+
+
+  #get "home/index"
+  #get "admin/index"
+  #get "login/index"
+
+  #get "home/show"
+  #get "home/category"
 
   #post "home/article/add/" => "home#add_to_cart"
 
-  post "login/" => "login#auth"
+  #post "login/" => "login#auth"
 
-  resources :shopping_carts
-  resources :articles
-  resources :users
+
 
   root 'home#index'
 

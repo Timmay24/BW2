@@ -16,7 +16,7 @@
   <% @articles.each do |article| %>
       <tr>
         <td><%= image_tag article.picture.url(:thumb) %></td>
-        <td><%= link_to article.name, home_show_path(:article => article)  %></td>
+        <td><%= link_to article.name, home_path(:article => article)  %></td>
         <td><%= article.category %></td>
         <td><%= number_to_currency(article.price_per_unit, locale: :de) %></td>
       </tr>
